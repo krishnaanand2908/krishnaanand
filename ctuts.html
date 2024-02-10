@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Anand || C Tutorials</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&family=Poppins&display=swap');
+
+        a:hover {
+            color: cadetblue;
+        }
+
+        a:link {
+            color: burlywood;
+        }
+
+        a:active {
+            color: darkslategrey;
+        }
+
+
+        body {
+            font-family: 'Baloo Bhai 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .head {
+            margin: 0 auto;
+            font-size: 1.2em;
+            /* Adjust the font size as needed */
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            list-style: none;
+            margin: 0 2em;
+            font-size: 1.2em;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            /* Adjust the font size as needed */
+        }
+
+        header nav ul li a:hover {
+            color: orange;
+        }
+
+        header nav ul li a:link {
+            color: white;
+        }
+
+        header nav ul li a:active {
+            color: white;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        footer {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            padding: 12;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        code {
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        output {
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            background-color: #f3f4f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            header nav ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            header nav ul li {
+                list-style: none;
+                margin: 0.3em;
+                font-size: 1.1em;
+            }
+
+            header nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9em;
+                /* Adjust the font size as needed */
+            }
+        }
+        .language {
+            margin: 2px;
+            padding: 2px;
+            text-decoration: underline;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h1>Krishna Anand</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@pythonkrishna290" target="_blank">YouTube</a>
+                </li>
+                <li>
+                    <a href="https://github.com/krishnaanand2908" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:pythonkrishna290@gmail.com">Gmail</a>
+                </li>
+                <li>
+                    <a href="https://replit.com/@PythonKrishna29" target="_blank">Replit</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="language">C Programming Tutorials</h1>
+        <section id="introduction-to-c">
+            <h2>Introduction to C Programming</h2>
+            <p>C is a powerful and widely used programming language known for its efficiency, flexibility, and portability. Developed in the early 1970s by Dennis Ritchie at Bell Labs, C has had a profound impact on the field of computer programming and has influenced many modern programming languages.</p>
+            
+            <h3>What is C?</h3>
+            <p>C is a general-purpose, procedural programming language that provides low-level access to system memory and hardware. It was designed to be compiled into efficient machine code, making it suitable for developing system software, such as operating systems, device drivers, and embedded systems.</p>
+            
+            <h3>Compilers for C</h3>
+            <p>To write and execute C programs, you need a C compiler, which translates the human-readable C code into machine-readable instructions that can be executed by a computer. There are several popular C compilers available, including:</p>
+            <ul>
+                <li> <strong><a href="https://sourceforge.net/projects/mingw/">MinGW</a></strong> (Recommended)</li>
+                <li> <strong><a href="https://gcc.gnu.org/install/">gcc:</a></strong>  The GNU Compiler Collection (GCC) is a widely used open-source compiler suite that supports various programming languages, including C.</li>
+                <li> <strong><a href="https://clang.llvm.org/">clang:</a></strong>  Clang is another open-source compiler suite developed by LLVM project, known for its fast compilation and modern language features.</li>
+                <li> <strong><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++:</a></strong>  Visual C++ is a compiler provided by Microsoft for developing applications on Windows platforms.</li>
+                <!-- Add more compilers as needed -->
+            </ul>
+            
+            <h3>History of C</h3>
+            <p>C was developed by Dennis Ritchie at Bell Labs in the early 1970s as an evolution of the B programming language. It was initially used to implement the UNIX operating system, which was written in C, making C one of the first programming languages used for system programming. C gained popularity due to its simplicity, efficiency, and ability to access hardware directly, leading to its widespread adoption in the computing industry.</p>
+        </section>
+
+        <hr>
+
+        <section id="basic-structure-and-syntax">
+            <h2>Basic Structure and Syntax of C</h2>
+            <p>In C programming, a program consists of one or more functions, where each function contains a set of statements that perform specific tasks. Let's explore the basic structure and syntax of C:</p>
+            
+            <h3>1. Structure of a C Program</h3>
+            <p>A typical C program consists of:</p>
+            <ul>
+                <li><strong>Preprocessor Directives:</strong> These are instructions to the compiler that begin with a '#' symbol. They are used to include header files, define macros, etc.</li>
+                <li><strong>Function Definitions:</strong> C programs contain one or more functions. The 'main()' function is the entry point of a C program.</li>
+                <li><strong>Statements:</strong> Each function contains a set of statements that specify the actions to be performed.</li>
+            </ul>
+            
+            <h3>2. Syntax of a C Program</h3>
+            <p>The syntax of a C program includes:</p>
+            <ul>
+                <li><strong>Variables:</strong> Variables are used to store data. They must be declared before they are used and follow certain naming conventions.</li>
+                <li><strong>Constants:</strong> Constants are fixed values that do not change during program execution.</li>
+                <li><strong>Comments:</strong> Comments are used to document code and improve readability. They can be single-line or multi-line comments.</li>
+                <li><strong>Statements:</strong> Statements are instructions that perform specific actions. They end with a semicolon (;).</li>
+                <li><strong>Functions:</strong> Functions are blocks of code that perform a specific task. They have a name, parameters (if any), and a return type.</li>
+                <li><strong>Control Structures:</strong> Control structures such as if-else, switch-case, loops (while, do-while, for) are used to control the flow of execution in a program.</li>
+            </ul>
+            
+            <p>Here's a simple example of a C program:</p>
+            <code>
+                #include <stdio.h><br>
+                <br>
+                int main() {<br>
+                &emsp;// Print "Hello, World!" to the console<br>
+                &emsp;printf("Hello, World!");<br>
+                &emsp;return 0;<br>
+                }
+            </code>
+        </section>
+
+        <hr>
+        
+        <section id="comments-and-variables">
+            <h2>Comments and Variables in C</h2>
+            <p>Comments and variables are essential components of any programming language, including C. Let's explore their usage:</p>
+            
+            <h3>1. Comments</h3>
+            <p>Comments are used to add explanatory notes within the source code. They are ignored by the compiler and serve to improve code readability and maintainability. C supports two types of comments:</p>
+            <ul>
+                <li><strong>Single-line comments:</strong> Denoted by two forward slashes (//). They comment out a single line of code.</li>
+                <li><strong>Multi-line comments:</strong> Enclosed between /* and */, allowing comments to span multiple lines.</li>
+            </ul>
+            
+            <h3>2. Variables</h3>
+            <p>Variables are named storage locations used to store data during program execution. In C, variables must be declared before they can be used. Each variable has a data type that determines the type of data it can store.</p>
+            <p>Common data types in C include:</p>
+            <ul>
+                <li><strong>int:</strong> Integer data type for storing whole numbers.</li>
+                <li><strong>float:</strong> Floating-point data type for storing decimal numbers.</li>
+                <li><strong>char:</strong> Character data type for storing single characters.</li>
+                <li><strong>double:</strong> Double precision floating-point data type.</li>
+                <!-- Add more data types as needed -->
+            </ul>
+            <p>Variables are declared using the syntax: <code>data_type variable_name;</code></p>
+            
+            <h3>Example:</h3>
+            <p>Here's an example demonstrating the usage of comments and variables in C:</p>
+            <code>
+                #include <stdio.h><br>
+                <br>
+                int main() {<br>
+                &emsp;// Declare variables<br>
+                &emsp;int num1 = 10; // Integer variable<br>
+                &emsp;float num2 = 3.14; // Float variable<br>
+                &emsp;char ch = 'A'; // Character variable<br>
+                <br>
+                &emsp;// Print variable values<br>
+                &emsp;printf("num1: %d\n", num1);<br>
+                &emsp;printf("num2: %f\n", num2);<br>
+                &emsp;printf("ch: %c\n", ch);<br>
+                <br>
+                &emsp;return 0;<br>
+                }
+            </code>
+        </section>
+
+        <hr>
+    
+        <section id="data-types">
+            <h2>Data Types in C</h2>
+            <p>Data types specify the type of data that variables can store. In C, data types can be classified into several categories, including:</p>
+            
+            <h3>1. Basic Data Types</h3>
+            <p>Basic data types represent fundamental values and are directly supported by the C language. Common basic data types include:</p>
+            <ul>
+                <li><strong>int:</strong> Integer data type for storing whole numbers.</li>
+                <li><strong>float:</strong> Floating-point data type for storing decimal numbers.</li>
+                <li><strong>char:</strong> Character data type for storing single characters.</li>
+                <li><strong>double:</strong> Double precision floating-point data type.</li>
+                <!-- Add more basic data types as needed -->
+            </ul>
+            
+            <h3>2. Derived Data Types</h3>
+            <p>Derived data types are derived from basic data types and are used to represent complex data structures. Common derived data types include:</p>
+            <ul>
+                <li><strong>Array:</strong> A collection of elements of the same data type stored in contiguous memory locations.</li>
+                <li><strong>Pointer:</strong> A variable that stores the memory address of another variable.</li>
+                <li><strong>Structure:</strong> A user-defined data type that groups together variables of different data types under a single name.</li>
+                <li><strong>Union:</strong> Similar to a structure, but all members share the same memory location.</li>
+                <!-- Add more derived data types as needed -->
+            </ul>
+            
+            <h3>3. Enumeration Data Type</h3>
+            <p>Enumeration data type allows you to define a set of named integer constants. Each constant is assigned a unique value starting from 0 by default.</p>
+            
+            <h3>4. Void Data Type</h3>
+            <p>The <strong>void</strong> data type represents the absence of type. It is used to indicate that a function does not return any value or to declare generic pointers.</p>
+            
+            <h3>Example:</h3>
+            <p>Here's an example demonstrating the usage of various data types in C:</p>
+            <code>
+                #include <stdio.h><br>
+                <br>
+                int main() {<br>
+                &emsp;// Declare variables of different data types<br>
+                &emsp;int num = 10;<br>
+                &emsp;float pi = 3.14;<br>
+                &emsp;char ch = 'A';<br>
+                &emsp;double salary = 50000.50;<br>
+                <br>
+                &emsp;// Print variable values<br>
+                &emsp;printf("Integer: %d\n", num);<br>
+                &emsp;printf("Float: %f\n", pi);<br>
+                &emsp;printf("Character: %c\n", ch);<br>
+                &emsp;printf("Double: %lf\n", salary);<br>
+                <br>
+                &emsp;return 0;<br>
+                }
+            </code>
+        </section>
+
+        <hr>
+
+        <section id="constants">
+            <h2>Constants in C</h2>
+            <p>In C programming, constants are fixed values that do not change during program execution. They can be classified into two main categories: </p>
+            
+            <h3>1. Numeric Constants</h3>
+            <p>Numeric constants are fixed numeric values that are directly specified in the source code. They can be of different types:</p>
+            <ul>
+                <li><strong>Integer Constants:</strong> Whole numbers without any decimal point, such as 10, -15, 0.</li>
+                <li><strong>Floating-point Constants:</strong> Numbers with a decimal point or exponential notation, such as 3.14, -0.5, 1.2e3.</li>
+                <li><strong>Character Constants:</strong> Single characters enclosed in single quotes, such as 'A', 'b', '5'.</li>
+                <li><strong>String Constants:</strong> Sequences of characters enclosed in double quotes, such as "Hello", "C programming".</li>
+            </ul>
+            
+            <h3>2. Symbolic Constants</h3>
+            <p>Symbolic constants are identifiers that represent fixed values throughout the program. They are declared using the <code>#define</code> preprocessor directive or the <code>const</code> keyword.</p>
+            <p>Using <code>#define</code>:</p>
+            <code>#define PI 3.14</code><br>
+            <p>Using <code>const</code> keyword:</p>
+            <code>const int MAX_SIZE = 100;</code>
+            
+            <h3>Example:</h3>
+            <p>Here's an example demonstrating the usage of numeric and symbolic constants in C:</p>
+            <code>
+                #include <stdio.h><br>
+                <br>
+                #define PI 3.14159<br>
+                const int MAX_VALUE = 100;<br>
+                <br>
+                int main() {<br>
+                &emsp;printf("Value of PI: %f\n", PI);<br>
+                &emsp;printf("Maximum value: %d\n", MAX_VALUE);<br>
+                <br>
+                &emsp;return 0;<br>
+                }
+            </code>
+        </section>
+
+        <hr>
+
+        <section id="operators">
+            <h2>Operators in C</h2>
+            <p>Operators are symbols used to perform operations on variables and values in a C program. Let's explore the different types of operators:</p>
+            
+            <h3>1. Arithmetic Operators</h3>
+            <p>Arithmetic operators are used to perform mathematical operations on numeric operands.</p>
+            <ul>
+                <li><strong>+</strong> (Addition): Adds two operands.</li>
+                <li><strong>-</strong> (Subtraction): Subtracts the second operand from the first.</li>
+                <li><strong>*</strong> (Multiplication): Multiplies two operands.</li>
+                <li><strong>/</strong> (Division): Divides the first operand by the second.</li>
+                <li><strong>%</strong> (Modulus): Returns the remainder of the division of the first operand by the second.</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int a = 10;<br>
+                int b = 5;<br>
+                int sum = a + b; // sum = 15<br>
+                int difference = a - b; // difference = 5<br>
+                int product = a * b; // product = 50<br>
+                int quotient = a / b; // quotient = 2<br>
+                int remainder = a % b; // remainder = 0<br>
+                printf("Sum: %d\n", sum);<br>
+                printf("Difference: %d\n", difference);<br>
+                printf("Product: %d\n", product);<br>
+                printf("Quotient: %d\n", quotient);<br>
+                printf("Remainder: %d\n", remainder);<br>
+            </code>
+            <output>
+                Sum: 15<br>
+                Difference: 5<br>
+                Product: 50<br>
+                Quotient: 2<br>
+                Remainder: 0
+            </output>
+            
+            <h3>2. Relational Operators</h3>
+            <p>Relational operators are used to compare the values of operands.</p>
+            <ul>
+                <li><strong>==</strong> (Equal to): Returns true if the operands are equal.</li>
+                <li><strong>!=</strong> (Not equal to): Returns true if the operands are not equal.</li>
+                <li><strong>&lt;</strong> (Less than): Returns true if the first operand is less than the second.</li>
+                <li><strong>&gt;</strong> (Greater than): Returns true if the first operand is greater than the second.</li>
+                <li><strong>&lt;=</strong> (Less than or equal to): Returns true if the first operand is less than or equal to the second.</li>
+                <li><strong>&gt;=</strong> (Greater than or equal to): Returns true if the first operand is greater than or equal to the second.</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int x = 5;<br>
+                int y = 10;<br>
+                if (x == y) {<br>
+                &emsp;printf("x is equal to y");<br>
+                } else {<br>
+                &emsp;printf("x is not equal to y");<br>
+                }
+            </code>
+            <output>x is not equal to y</output>
+            
+            <h3>3. Logical Operators</h3>
+            <p>Logical operators are used to perform logical operations on boolean operands.</p>
+            <ul>
+                <li><strong>&&</strong> (Logical AND): Returns true if both operands are true.</li>
+                <li><strong>||</strong> (Logical OR): Returns true if at least one operand is true.</li>
+                <li><strong>!</strong> (Logical NOT): Returns true if the operand is false (negation).</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int a = 5;<br>
+                int b = 10;<br>
+                if (a > 0 && b > 0) {<br>
+                &emsp;printf("Both a and b are positive");<br>
+                }<br>
+                if (a > 0 || b > 0) {<br>
+                &emsp;printf("At least one of a or b is positive");<br>
+                }<br>
+                if (!(a > 0)) {<br>
+                &emsp;printf("a is not positive");<br>
+                }
+            </code>
+            <output>
+                Both a and b are positive<br>
+                At least one of a or b is positive
+            </output>
+            
+            <h3>4. Assignment Operators</h3>
+            <p>Assignment operators are used to assign values to variables.</p>
+            <ul>
+                <li><strong>=</strong> (Simple assignment): Assigns the value of the right operand to the left operand.</li>
+                <li><strong>+=</strong> (Add and assign): Adds the value of the right operand to the left operand and assigns the result to the left operand.</li>
+                <li><strong>-=</strong> (Subtract and assign): Subtracts the value of the right operand from the left operand and assigns the result to the left operand.</li>
+                <li><strong>*=</strong> (Multiply and assign): Multiplies the value of the right operand by the left operand and assigns the result to the left operand.</li>
+                <li><strong>/=</strong> (Divide and assign): Divides the value of the left operand by the right operand and assigns the result to the left operand.</li>
+                <li><strong>%=</strong> (Modulus and assign): Computes the modulus of the left operand with the right operand and assigns the result to the left operand.</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int x = 10;<br>
+                x += 5; // Equivalent to x = x + 5<br>
+                printf("Value of x after addition: %d\n", x);<br>
+                x *= 2; // Equivalent to x = x * 2<br>
+                printf("Value of x after multiplication: %d\n", x);
+            </code>
+            <output>
+                Value of x after addition: 15<br>
+                Value of x after multiplication: 30
+            </output>
+            
+            <h3>5. Bitwise Operators</h3>
+            <p>Bitwise operators are used to perform bitwise operations on integer operands.</p>
+            <ul>
+                <li><strong>&</strong> (Bitwise AND): Performs a bitwise AND operation between the bits of the operands.</li>
+                <li><strong>|</strong> (Bitwise OR): Performs a bitwise OR operation between the bits of the operands.</li>
+                <li><strong>^</strong> (Bitwise XOR): Performs a bitwise XOR (exclusive OR) operation between the bits of the operands.</li>
+                <li><strong>~</strong> (Bitwise NOT): Performs a bitwise NOT (complement) operation on the operand.</li>
+                <li><strong>&lt;&lt;</strong> (Left shift): Shifts the bits of the left operand to the left by the number of positions specified by the right operand.</li>
+                <li><strong>&gt;&gt;</strong> (Right shift): Shifts the bits of the left operand to the right by the number of positions specified by the right operand.</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int a = 5; // Binary representation: 0101<br>
+                int b = 3; // Binary representation: 0011<br>
+                int bitwise_and = a & b; // Result: 0001 (1 in decimal)<br>
+                int bitwise_or = a | b; // Result: 0111 (7 in decimal)<br>
+                int bitwise_xor = a ^ b; // Result: 0110 (6 in decimal)<br>
+                int bitwise_not_a = ~a; // Result: 11111010 (-6 in decimal)<br>
+                int left_shift = a << 1; // Result: 1010 (10 in decimal)<br>
+                int right_shift = a >> 1; // Result: 0010 (2 in decimal)
+            </code>
+            <output>
+                Bitwise AND: 1<br>
+                Bitwise OR: 7<br>
+                Bitwise XOR: 6<br>
+                Bitwise NOT of a: -6<br>
+                Left shift: 10<br>
+                Right shift: 2
+            </output>
+            
+            <!-- Add explanations and examples for other types of operators as needed -->
+        </section>
+
+        <hr>
+
+        <section id="format-specifiers">
+            <h2>Format Specifiers in C</h2>
+            <p>Format specifiers are used in C programming to specify the data type of variables that are being printed or scanned. They are placeholders that tell the <code>printf</code> and <code>scanf</code> functions how to interpret the corresponding arguments.</p>
+            
+            <h3>1. Integer Format Specifiers</h3>
+            <p>For printing and scanning integer values:</p>
+            <ul>
+                <li><strong>%d</strong>: Signed integer (decimal).</li>
+                <li><strong>%u</strong>: Unsigned integer (decimal).</li>
+                <li><strong>%x</strong>: Unsigned integer (hexadecimal, lowercase).</li>
+                <li><strong>%X</strong>: Unsigned integer (hexadecimal, uppercase).</li>
+                <li><strong>%o</strong>: Unsigned integer (octal).</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int num = 42;<br>
+                printf("Decimal: %d\n", num);<br>
+                printf("Hexadecimal (lowercase): %x\n", num);<br>
+                printf("Octal: %o\n", num);
+            </code>
+            <output>
+                Decimal: 42<br>
+                Hexadecimal (lowercase): 2a<br>
+                Octal: 52
+            </output>
+            
+            <h3>2. Floating-Point Format Specifiers</h3>
+            <p>For printing and scanning floating-point values:</p>
+            <ul>
+                <li><strong>%f</strong>: Floating-point number (decimal notation).</li>
+                <li><strong>%e</strong>: Floating-point number (scientific notation, lowercase).</li>
+                <li><strong>%E</strong>: Floating-point number (scientific notation, uppercase).</li>
+                <li><strong>%g</strong>: Floating-point number (compact decimal or scientific notation, lowercase).</li>
+                <li><strong>%G</strong>: Floating-point number (compact decimal or scientific notation, uppercase).</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                float f = 3.14;<br>
+                printf("Floating-point: %f\n", f);<br>
+                printf("Scientific notation (lowercase): %e\n", f);<br>
+                printf("Scientific notation (uppercase): %E\n", f);
+            </code>
+            <output>
+                Floating-point: 3.140000<br>
+                Scientific notation (lowercase): 3.140000e+00<br>
+                Scientific notation (uppercase): 3.140000E+00
+            </output>
+            
+            <h3>3. Character Format Specifiers</h3>
+            <p>For printing and scanning character values:</p>
+            <ul>
+                <li><strong>%c</strong>: Single character.</li>
+                <li><strong>%s</strong>: String of characters (null-terminated).</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                char ch = 'A';<br>
+                printf("Character: %c\n", ch);<br>
+                char str[] = "Hello";<br>
+                printf("String: %s\n", str);
+            </code>
+            <output>
+                Character: A<br>
+                String: Hello
+            </output>
+            
+            <h3>4. Pointer Format Specifier</h3>
+            <p>For printing and scanning memory addresses:</p>
+            <ul>
+                <li><strong>%p</strong>: Memory address (hexadecimal).</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int var = 10;<br>
+                printf("Address of var: %p\n", &var);
+            </code>
+            <output>
+                Address of var: 0x7ffee9b3a9ec
+            </output>
+        </section>
+
+        <hr>
+
+        <section id="user-io">
+            <h2>User Input and Output in C</h2>
+            <p>In C programming, user input and output are handled using the standard input (<code>stdin</code>) and standard output (<code>stdout</code>) streams. The <code>scanf</code> function is used for reading input from the user, while the <code>printf</code> function is used for displaying output to the user.</p>
+            
+            <h3>1. Reading Input from the User</h3>
+            <p>The <code>scanf</code> function is used to read input from the user. It takes format specifiers as arguments to determine the data type of the input being read.</p>
+            <p>Example:</p>
+            <code>
+                int num;<br>
+                printf("Enter an integer: ");<br>
+                scanf("%d", &num); // Read an integer from the user<br>
+                printf("You entered: %d\n", num);
+            </code>
+            <p>Output:</p>
+            <output>
+                Enter an integer: <em>(user input)</em><br>
+                You entered: <em>(value entered by the user)</em>
+            </output>
+            
+            <h3>2. Displaying Output to the User</h3>
+            <p>The <code>printf</code> function is used to display output to the user. It takes format specifiers and corresponding values as arguments to format and print the output.</p>
+            <p>Example:</p>
+            <code>
+                int a = 10;<br>
+                float b = 3.14;<br>
+                printf("The value of a is %d and the value of b is %f\n", a, b);
+            </code>
+            <p>Output:</p>
+            <output>
+                The value of a is 10 and the value of b is 3.140000
+            </output>
+        </section>
+
+        <hr>
+
+        <section id="conditional-statements">
+            <h2>Conditional Statements in C</h2>
+            
+            <h3>1. If-Else Statement</h3>
+            <p>The if-else statement is used to execute a block of code based on the evaluation of a condition. If the condition evaluates to true, the code inside the if block is executed; otherwise, the code inside the else block (if present) is executed.</p>
+            <p>Example:</p>
+            <code>
+                int num = 10;<br>
+                if (num > 0) {<br>
+                &emsp;printf("Positive number");<br>
+                } else {<br>
+                &emsp;printf("Negative number or zero");<br>
+                }
+            </code>
+            <p>Output:</p>
+            <output>
+                Positive number
+            </output>
+            
+            <h3>2. Switch-Case Statement</h3>
+            <p>The switch-case statement is used to execute one of several blocks of code based on the value of a variable or an expression. It provides an alternative to nested if-else statements.</p>
+            <p>Example:</p>
+            <code>
+                int choice;<br>
+                printf("Enter a choice (1, 2, or 3): ");<br>
+                scanf("%d", &choice);<br>
+                switch (choice) {<br>
+                &emsp;case 1:<br>
+                &emsp;&emsp;printf("You chose option 1");<br>
+                &emsp;&emsp;break;<br>
+                &emsp;case 2:<br>
+                &emsp;&emsp;printf("You chose option 2");<br>
+                &emsp;&emsp;break;<br>
+                &emsp;case 3:<br>
+                &emsp;&emsp;printf("You chose option 3");<br>
+                &emsp;&emsp;break;<br>
+                &emsp;default:<br>
+                &emsp;&emsp;printf("Invalid choice");<br>
+                }
+            </code>
+            <p>Output:</p>
+            <output>
+                Enter a choice (1, 2, or 3): <em>(user input)</em><br>
+                <em>(corresponding message based on user input)</em>
+            </output>
+        </section>
+
+        <hr>
+
+        <section id="iteration-statements">
+            <h2>Iteration Statements in C</h2>
+            
+            <section id="loops">
+                <h3>Loops</h3>
+                <p>Loops are used in programming to execute a block of code repeatedly as long as a specified condition is true. In C, there are different types of loops available:</p>
+                
+                <h4>1. While Loop</h4>
+                <p>The while loop is used to repeatedly execute a block of code as long as the specified condition evaluates to true.</p>
+                <p>Example:</p>
+                <code>
+                    int i = 1;<br>
+                    while (i <= 5) {<br>
+                    &emsp;printf("%d ", i);<br>
+                    &emsp;i++;<br>
+                    }
+                </code>
+                <p>Output:</p>
+                <output>
+                    1 2 3 4 5
+                </output>
+                
+                <h4>2. Do-While Loop</h4>
+                <p>The do-while loop is similar to the while loop, but the condition is evaluated after the block of code is executed, so the block of code is always executed at least once.</p>
+                <p>Example:</p>
+                <code>
+                    int i = 1;<br>
+                    do {<br>
+                    &emsp;printf("%d ", i);<br>
+                    &emsp;i++;<br>
+                    } while (i <= 5);
+                </code>
+                <p>Output:</p>
+                <output>
+                    1 2 3 4 5
+                </output>
+                
+                <h4>3. For Loop</h4>
+                <p>The for loop is used to repeatedly execute a block of code for a specified number of times.</p>
+                <p>Example:</p>
+                <code>
+                    for (int i = 1; i <= 5; i++) {<br>
+                    &emsp;printf("%d ", i);<br>
+                    }
+                </code>
+                <p>Output:</p>
+                <output>
+                    1 2 3 4 5
+                </output>
+                
+                <h4>4. Nested Loops</h4>
+                <p>Nested loops are loops within loops. They can be used to implement complex logic such as iterating over a 2D array.</p>
+                <p>Example:</p>
+                <code>
+                    for (int i = 1; i <= 3; i++) {<br>
+                    &emsp;for (int j = 1; j <= 3; j++) {<br>
+                    &emsp;&emsp;printf("%d ", j);<br>
+                    &emsp;}<br>
+                    &emsp;printf("\n");<br>
+                    }
+                </code>
+                <p>Output:</p>
+                <output>
+                    1 2 3 <br>
+                    1 2 3 <br>
+                    1 2 3
+                </output>
+            </section>
+
+            <hr>
+            
+            <h3>Break Statement</h3>
+            <p>The break statement is used to exit the loop prematurely, regardless of whether the loop condition is still true.</p>
+            <p>Example:</p>
+            <code>
+                for (int i = 1; i <= 5; i++) {<br>
+                &emsp;if (i == 3) {<br>
+                &emsp;&emsp;break;<br>
+                &emsp;}<br>
+                &emsp;printf("%d ", i);<br>
+                }
+            </code>
+            <p>Output:</p>
+            <output>
+                1 2
+            </output>
+            
+            <h3>Continue Statement</h3>
+            <p>The continue statement is used to skip the current iteration of the loop and continue with the next iteration.</p>
+            <p>Example:</p>
+            <code>
+                for (int i = 1; i <= 5; i++) {<br>
+                &emsp;if (i == 3) {<br>
+                &emsp;&emsp;continue;<br>
+                &emsp;}<br>
+                &emsp;printf("%d ", i);<br>
+                }
+            </code>
+            <p>Output:</p>
+            <output>
+                1 2 4 5
+            </output>
+        </section>
+
+        <hr>
+
+        <section id="arrays">
+            <h2>Arrays in C</h2>
+            <p>An array is a collection of elements of the same data type stored in contiguous memory locations. It allows you to store multiple values of the same type under a single name.</p>
+            
+            <h3>1. Array Basics</h3>
+            <p>To declare an array in C, you specify the type of elements it will hold and the number of elements enclosed in square brackets []:</p>
+            <code>
+                int numbers[5]; // Declares an integer array with 5 elements<br>
+                float prices[10]; // Declares a float array with 10 elements
+            </code>
+            <p>You can initialize an array during declaration:</p>
+            <code>
+                int numbers[5] = {1, 2, 3, 4, 5}; // Initializes an array with specified values<br>
+                char vowels[] = {'a', 'e', 'i', 'o', 'u'}; // Initializes an array without specifying the size
+            </code>
+            
+            <h3>2. Accessing Array Elements</h3>
+            <p>Array elements are accessed using an index. The index starts from 0 for the first element and increments by 1 for each subsequent element:</p>
+            <code>
+                int numbers[5] = {1, 2, 3, 4, 5};<br>
+                printf("First element: %d\n", numbers[0]); // Accesses the first element<br>
+                printf("Third element: %d\n", numbers[2]); // Accesses the third element
+            </code>
+            <p>Output:</p>
+            <output>
+                First element: 1<br>
+                Third element: 3
+            </output>
+            
+            <h3>3. Array Operations</h3>
+            <p>Arrays support various operations such as traversal, insertion, deletion, and searching.</p>
+            <ul>
+                <li><strong>Traversal:</strong> Iterating through each element of the array.</li>
+                <li><strong>Insertion:</strong> Adding an element at a specific position or at the end of the array.</li>
+                <li><strong>Deletion:</strong> Removing an element from a specific position or based on its value.</li>
+                <li><strong>Searching:</strong> Finding the index of a specific element in the array.</li>
+            </ul>
+            <!-- You can provide examples for each operation if needed -->
+        </section>
+
+        <hr>
+
+        <section id="strings">
+            <h2>Strings in C</h2>
+            <p>In C, a string is an array of characters terminated by a null character ('\0'). Strings are used to represent sequences of characters, such as words or sentences.</p>
+            
+            <h3>1. String Basics</h3>
+            <p>To declare and initialize a string in C, you can use a character array:</p>
+            <code>
+                char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; // Declares and initializes a string<br>
+                char name[] = "John"; // Declares and initializes a string without specifying the size
+            </code>
+            <p>Strings can also be initialized using string literals enclosed in double quotes ("").</p>
+            
+            <h3>2. String Functions</h3>
+            <p>C provides several built-in functions for string manipulation:</p>
+            <ul>
+                <li><code>strlen(str)</code>: Returns the length of the string.</li>
+                <li><code>strcpy(dest, src)</code>: Copies the contents of one string to another.</li>
+                <li><code>strcat(dest, src)</code>: Concatenates two strings.</li>
+                <li><code>strcmp(str1, str2)</code>: Compares two strings.</li>
+                <li><code>strchr(str, ch)</code>: Returns a pointer to the first occurrence of a character in a string.</li>
+                <li><code>strstr(str1, str2)</code>: Returns a pointer to the first occurrence of str2 in str1.</li>
+            </ul>
+            <!-- You can provide examples for each function if needed -->
+        </section>
+
+        <hr>
+
+        <section id="pointers">
+            <h2>Pointers in C</h2>
+            <p>A pointer in C is a variable that stores the memory address of another variable. Pointers are used to access and manipulate memory directly, allowing for efficient memory management and advanced data structures.</p>
+            
+            <h3>1. Pointer Basics</h3>
+            <p>To declare a pointer in C, you use the asterisk (*) symbol followed by the variable name:</p>
+            <code>
+                int *ptr; // Declares a pointer to an integer<br>
+                float *fptr; // Declares a pointer to a float
+            </code>
+            <p>To access the value stored at a memory address pointed to by a pointer, you use the dereference operator (*):</p>
+            <code>
+                int x = 10;<br>
+                int *ptr = &x; // Pointer ptr points to the address of variable x<br>
+                printf("Value of x: %d\n", *ptr); // Dereference ptr to get the value of x
+            </code>
+            
+            <h3>2. Pointer Operations</h3>
+            <p>Pointers support various operations such as:</p>
+            <ul>
+                <li><strong>Assignment:</strong> Assigning the address of a variable to a pointer.</li>
+                <li><strong>Arithmetic:</strong> Performing arithmetic operations on pointers.</li>
+                <li><strong>Comparison:</strong> Comparing pointers for equality or ordering.</li>
+            </ul>
+            <!-- You can provide examples for each operation if needed -->
+            
+            <h3>3. Void Pointers</h3>
+            <p>A void pointer (or generic pointer) is a pointer that can point to objects of any data type. It is declared using the <code>void *</code> type:</p>
+            <code>
+                void *ptr; // Declares a void pointer
+            </code>
+            <p>Void pointers are commonly used in functions that operate on generic data.</p>
+            
+            <h3>4. Null Pointers</h3>
+            <p>A null pointer is a special pointer that does not point to any memory location. It is represented by the constant <code>NULL</code> or <code>0</code>:</p>
+            <code>
+                int *ptr = NULL; // Initializes a pointer to NULL<br>
+                float *fptr = 0; // Initializes a pointer to NULL using 0
+            </code>
+            <p>Null pointers are commonly used to indicate that a pointer does not currently point to valid data.</p>
+        </section>
+
+        <hr>
+
+        <section id="structures-and-unions">
+            <h2>Structures and Unions in C</h2>
+            <p>In C, structures and unions are used to define custom data types that can contain multiple members of different data types. They allow you to group related variables together into a single unit.</p>
+            
+            <h3>1. Structures</h3>
+            <p>A structure is a collection of variables of different data types grouped together under a single name. It is defined using the <code>struct</code> keyword:</p>
+            <code>
+                struct Person {<br>
+                &emsp;char name[50];<br>
+                &emsp;int age;<br>
+                &emsp;float salary;<br>
+                };
+            </code>
+            <p>To access members of a structure, you use the dot (.) operator:</p>
+            <code>
+                struct Person p;<br>
+                strcpy(p.name, "John");<br>
+                p.age = 30;<br>
+                p.salary = 50000.0;
+            </code>
+            
+            <h3>2. Unions</h3>
+            <p>A union is similar to a structure, but all members share the same memory location. This means that only one member can be active at a time. Unions are defined using the <code>union</code> keyword:</p>
+            <code>
+                union Data {<br>
+                &emsp;int i;<br>
+                &emsp;float f;<br>
+                &emsp;char c;<br>
+                };
+            </code>
+            <p>Accessing members of a union is similar to accessing members of a structure:</p>
+            <code>
+                union Data d;<br>
+                d.i = 10;<br>
+                printf("%d", d.i); // Outputs 10<br>
+                d.f = 3.14;<br>
+                printf("%f", d.f); // Outputs 3.14
+            </code>
+            <p>However, accessing a different member after assigning a value to one member may result in unexpected behavior due to memory sharing.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2 id="content-soon" style="color: rgb(209, 157, 78);">Thanks for staying! More content will be added soon...
+            </h2>
+    
+        </section>
+
+        
+
+        
+        
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Krishna Anand</p>
+    </footer>
+</body>
+</html>

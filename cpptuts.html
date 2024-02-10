@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Anand || C++ Tutorials</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&family=Poppins&display=swap');
+
+        a:hover {
+            color: cadetblue;
+        }
+
+        a:link {
+            color: burlywood;
+        }
+
+        a:active {
+            color: darkslategrey;
+        }
+
+
+        body {
+            font-family: 'Baloo Bhai 2', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .head {
+            margin: 0 auto;
+            font-size: 1.2em;
+            /* Adjust the font size as needed */
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            list-style: none;
+            margin: 0 2em;
+            font-size: 1.2em;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            /* Adjust the font size as needed */
+        }
+
+        header nav ul li a:hover {
+            color: orange;
+        }
+
+        header nav ul li a:link {
+            color: white;
+        }
+
+        header nav ul li a:active {
+            color: white;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        footer {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            text-align: center;
+            padding: 12;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        code {
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        output {
+            padding: 10px;
+            margin: 10px;
+            display: block;
+            background-color: #f3f4f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            header nav ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            header nav ul li {
+                list-style: none;
+                margin: 0.3em;
+                font-size: 1.1em;
+            }
+
+            header nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9em;
+                /* Adjust the font size as needed */
+            }
+        }
+
+        .language {
+            margin: 2px;
+            padding: 2px;
+            text-decoration: underline;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <h1>Krishna Anand</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@pythonkrishna290" target="_blank">YouTube</a>
+                </li>
+                <li>
+                    <a href="https://github.com/krishnaanand2908" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:pythonkrishna290@gmail.com">Gmail</a>
+                </li>
+                <li>
+                    <a href="https://replit.com/@PythonKrishna29" target="_blank">Replit</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="language">C++ Programming Tutorials</h1>
+        <section id="introduction-to-cpp">
+            <h2>Introduction to C++</h2>
+            <p>C++ is a powerful and versatile programming language derived from the C programming language. It was
+                developed by Bjarne Stroustrup at Bell Labs in the early 1980s. C++ is widely used in various domains
+                such as system/software development, game development, web development, and scientific computing.</p>
+
+            <h3>1. History of C++</h3>
+            <p>C++ was created by Bjarne Stroustrup as an extension of the C programming language. Stroustrup began
+                developing C++ in 1979 at Bell Labs while working on his Ph.D. thesis. The first commercial
+                implementation of C++ was released in 1985.</p>
+            <p>C++ evolved from C with the addition of object-oriented programming features such as classes,
+                inheritance, and polymorphism. Stroustrup's goal was to create a language that combined the efficiency
+                and low-level control of C with the high-level abstractions and flexibility of Simula, a language known
+                for its support for object-oriented programming.</p>
+
+            <h3>2. Features of C++</h3>
+            <p>C++ introduces several features beyond C, including:</p>
+            <ul>
+                <li><strong>Object-Oriented Programming (OOP):</strong> C++ supports classes and objects, encapsulation,
+                    inheritance, and polymorphism, making it an object-oriented programming language.</li>
+                <li><strong>Template and Generic Programming:</strong> C++ supports template functions and classes,
+                    enabling generic programming and algorithm development.</li>
+                <li><strong>Standard Template Library (STL):</strong> C++ provides a rich collection of classes and
+                    functions in the STL for data structures, algorithms, and I/O operations.</li>
+                <li><strong>Exception Handling:</strong> C++ supports exception handling mechanisms for robust error
+                    handling and recovery.</li>
+                <li><strong>Memory Management:</strong> C++ offers manual memory management through features like
+                    dynamic memory allocation and deallocation.</li>
+            </ul>
+
+            <h3>3. Hello World Program in C++</h3>
+            <p>Here's a simple "Hello, World!" program in C++:</p>
+            <code>
+        #include &lt;iostream&gt;<br>
+        using namespace std;<br>
+        <br>
+        int main() {<br>
+        &emsp;cout &lt;&lt; "Hello, World!" &lt;&lt; endl;<br>
+        &emsp;return 0;<br>
+        }
+    </code>
+
+            <h3>4. Setting Up a C++ Development Environment</h3>
+            <p>To start programming in C++, you need a text editor or an Integrated Development Environment (IDE) such
+                as Visual Studio, Code::Blocks, or Qt Creator. You also need a C++ compiler like GCC, Clang, or
+                Microsoft Visual C++ Compiler.</p>
+
+            <h3>5. Compiling and Running C++ Programs</h3>
+            <p>You can compile and run C++ programs using the command line or an IDE. For example, to compile a program
+                named <code>hello.cpp</code> with GCC:</p>
+            <code>
+        g++ hello.cpp -o hello<br>
+        ./hello
+    </code>
+
+            <h3>6. Learning Resources</h3>
+            <p>There are many resources available for learning C++, including online tutorials, books, and courses. Some
+                popular resources include:</p>
+            <ul>
+                <li><a href="https://www.learncpp.com/">LearnCpp.com</a></li>
+                <li><a href="https://www.cplusplus.com/doc/tutorial/">cplusplus.com - C++ Tutorials</a></li>
+                <li><a href="https://www.udemy.com/courses/search/?q=c%2B%2B">Udemy - C++ Courses</a></li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <section id="basic-structure-of-cpp">
+            <h2>Basic Structure of a C++ Program</h2>
+            <p>A typical C++ program consists of one or more functions. The main function, <code>main()</code>, serves as the entry point of the program. Here's the basic structure of a C++ program:</p>
+            
+            <h3>1. Preprocessor Directives</h3>
+            <p>Preprocessor directives are instructions to the compiler that begin with the <code>#</code> symbol. They are processed before the compilation of the program. Common preprocessor directives include:</p>
+            <ul>
+                <li><code>#include</code>: Includes header files containing declarations of functions and classes.</li>
+                <li><code>#define</code>: Defines macros for substitution in the code.</li>
+            </ul>
+            
+            <h3>2. Namespace Declaration</h3>
+            <p>Namespaces are used to organize code into logical groups and prevent naming conflicts. The <code>using namespace</code> directive is used to declare the namespaces that will be used in the program:</p>
+            <code>using namespace std;</code>
+            
+            <h3>3. Main Function</h3>
+            <p>The main function, <code>main()</code>, is the starting point of the program execution. It returns an integer value indicating the program's exit status to the operating system:</p>
+            <code>
+                int main() {<br>
+                &emsp;// Program statements<br>
+                &emsp;return 0; // Indicates successful execution<br>
+                }
+            </code>
+            
+            <h3>4. Program Statements</h3>
+            <p>The program statements consist of the code that performs the desired functionality of the program. These statements can include variable declarations, function calls, control structures, and other C++ language constructs.</p>
+            
+            <h3>5. Comments</h3>
+            <p>Comments are used to document the code and improve its readability. C++ supports single-line (<code>//</code>) and multi-line (<code>/* */</code>) comments:</p>
+            <code>
+                // This is a single-line comment<br>
+                /*<br>
+                &emsp;This is<br>
+                &emsp;a multi-line<br>
+                &emsp;comment<br>
+                */
+            </code>
+            
+            <hr>
+        </section>
+
+        <section id="comments-and-variables">
+            <h2>Comments and Variables in C++</h2>
+            
+            <h3>1. Comments</h3>
+            <p>Comments are used to document the code and improve its readability. C++ supports single-line (<code>//</code>) and multi-line (<code>/* */</code>) comments:</p>
+            <code>
+                // This is a single-line comment<br>
+                /*<br>
+                &emsp;This is<br>
+                &emsp;a multi-line<br>
+                &emsp;comment<br>
+                */
+            </code>
+            
+            <h3>2. Variables</h3>
+            <p>A variable is a named storage location in memory used to store data. In C++, variables must be declared before they are used. The basic syntax for variable declaration is:</p>
+            <code>
+                datatype variableName;<br>
+                int age; // Declares a variable 'age' of type int<br>
+                double salary; // Declares a variable 'salary' of type double
+            </code>
+            
+            <h3>3. Variable Initialization</h3>
+            <p>Variables can be initialized at the time of declaration:</p>
+            <code>
+                int count = 0; // Initializes 'count' to 0<br>
+                double pi = 3.14159; // Initializes 'pi' to 3.14159
+            </code>
+            
+            <h3>4. Naming Conventions</h3>
+            <p>Variable names in C++ must follow certain rules:</p>
+            <ul>
+                <li>Must begin with a letter (uppercase or lowercase) or underscore (_).</li>
+                <li>Subsequent characters can be letters, digits, or underscores.</li>
+                <li>Cannot be a reserved keyword.</li>
+            </ul>
+            <p>It is a good practice to choose meaningful and descriptive variable names to improve code readability.</p>
+            
+            <hr>
+        </section>
+
+        <section id="data-types-and-constants">
+            <h2>Data Types and Constants in C++</h2>
+            
+            <h3>1. Data Types</h3>
+            <p>C++ provides several built-in data types to represent different types of values. Some common data types include:</p>
+            <ul>
+                <li><strong>Integer Types:</strong> <code>int</code>, <code>long</code>, <code>short</code>, <code>unsigned int</code>, etc.</li>
+                <li><strong>Floating-Point Types:</strong> <code>float</code>, <code>double</code>, <code>long double</code></li>
+                <li><strong>Character Types:</strong> <code>char</code>, <code>wchar_t</code>, <code>char16_t</code>, <code>char32_t</code></li>
+                <li><strong>Boolean Type:</strong> <code>bool</code></li>
+            </ul>
+            
+            <h3>2. Constants</h3>
+            <p>A constant is a value that cannot be modified during program execution. In C++, constants can be defined using the <code>const</code> keyword or using <code>#define</code> preprocessor directive:</p>
+            <code>
+                const int MAX_SIZE = 100; // Defines a constant MAX_SIZE with value 100<br>
+                #define PI 3.14159 // Defines a constant PI with value 3.14159
+            </code>
+            <p>Constants provide meaningful names to values and improve code readability.</p>
+            
+            <hr>
+        </section>
+
+        <section id="operators">
+            <h2>Operators in C++</h2>
+            
+            <h3>1. Arithmetic Operators</h3>
+            <p>Arithmetic operators are used to perform mathematical operations on operands:</p>
+            <ul>
+                <li><code>+</code> (Addition): Adds two operands.</li>
+                <li><code>-</code> (Subtraction): Subtracts the second operand from the first.</li>
+                <li><code>*</code> (Multiplication): Multiplies two operands.</li>
+                <li><code>/</code> (Division): Divides the first operand by the second.</li>
+                <li><code>%</code> (Modulus): Returns the remainder of the division.</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int a = 10;<br>
+                int b = 5;<br>
+                int sum = a + b; // sum = 15<br>
+                int difference = a - b; // difference = 5<br>
+                int product = a * b; // product = 50<br>
+                int quotient = a / b; // quotient = 2<br>
+                int remainder = a % b; // remainder = 0
+            </code>
+            
+            <h3>2. Relational Operators</h3>
+            <p>Relational operators are used to compare the values of two operands:</p>
+            <ul>
+                <li><code>==</code> (Equal to): Returns true if operands are equal.</li>
+                <li><code>!=</code> (Not equal to): Returns true if operands are not equal.</li>
+                <li><code>&gt;</code> (Greater than): Returns true if the left operand is greater than the right.</li>
+                <li><code>&lt;</code> (Less than): Returns true if the left operand is less than the right.</li>
+                <li><code>&gt;=</code> (Greater than or equal to): Returns true if the left operand is greater than or equal to the right.</li>
+                <li><code>&lt;=</code> (Less than or equal to): Returns true if the left operand is less than or equal to the right.</li>
+            </ul>
+            <p>Example:</p>
+            <code>
+                int x = 10;<br>
+                int y = 5;<br>
+                bool result = (x > y); // result = true
+            </code>
+            
+            <h3>3. Logical Operators</h3>
+            <p>Logical operators are used to perform logical operations on boolean operands:</p>
+            <ul>
+                <li><code>&&</code> (Logical AND): Returns true if both operands are true.</li>
+                <li><code>||</code> (Logical OR): Returns true if either operand is true.</li>
+                <li><code>!</code> (Logical NOT): Returns true if the operand is false.</li>
+            </ul>
+            
+            <h3>4. Bitwise Operators</h3>
+            <p>Bitwise operators are used to perform bitwise operations on integer operands:</p>
+            <ul>
+                <li><code>&</code> (Bitwise AND): Performs a bitwise AND operation.</li>
+                <li><code>|</code> (Bitwise OR): Performs a bitwise OR operation.</li>
+                <li><code>^</code> (Bitwise XOR): Performs a bitwise XOR (exclusive OR) operation.</li>
+                <li><code>~</code> (Bitwise NOT): Performs a bitwise complement (inverse) operation.</li>
+                <li><code>&lt;&lt;</code> (Left shift): Shifts bits to the left by a specified number of positions.</li>
+                <li><code>&gt;&gt;</code> (Right shift): Shifts bits to the right by a specified number of positions.</li>
+            </ul>
+            
+            <h3>5. Assignment Operators</h3>
+            <p>Assignment operators are used to assign values to variables:</p>
+            <ul>
+                <li><code>=</code> (Simple assignment): Assigns the value of the right operand to the left operand.</li>
+                <li><code>+=</code> (Add and assign): Adds the value of the right operand to the left operand and assigns the result to the left operand.</li>
+                <li><code>-=</code> (Subtract and assign): Subtracts the value of the right operand from the left operand and assigns the result to the left operand.</li>
+                <li><code>*=</code> (Multiply and assign): Multiplies the value of the right operand with the left operand and assigns the result to the left operand.</li>
+                <li><code>/=</code> (Divide and assign): Divides the value of the left operand by the right operand and assigns the result to the left operand.</li>
+                <li><code>%=</code> (Modulus and assign): Calculates the remainder when the value of the left operand is divided by the right operand and assigns the result to the left operand.</li>
+                <!-- Add other compound assignment operators -->
+            </ul>
+            
+            <!-- Add more categories and examples for other types of operators -->
+            
+            <hr>
+        </section>
+
+        <section id="basic-io">
+            <h2>Basic Input and Output (I/O) in C++</h2>
+            
+            <h3>1. Output (cout)</h3>
+            <p>The <code>cout</code> object is used to output data to the standard output stream (usually the console). You can use the insertion operator (<code>&lt;&lt;</code>) to display data:</p>
+            <code>
+                #include &lt;iostream&gt;<br>
+                using namespace std;<br><br>
+                
+                int main() {<br>
+                &emsp;int num = 10;<br>
+                &emsp;cout &lt;&lt; "The value of num is: " &lt;&lt; num &lt;&lt; endl;<br>
+                &emsp;return 0;<br>
+                }
+            </code>
+            <p>This will output: <code>The value of num is: 10</code></p>
+            
+            <h3>2. Input (cin)</h3>
+            <p>The <code>cin</code> object is used to read data from the standard input stream (usually the keyboard). You can use the extraction operator (<code>&gt;&gt;</code>) to get input:</p>
+            <code>
+                #include &lt;iostream&gt;<br>
+                using namespace std;<br><br>
+                
+                int main() {<br>
+                &emsp;int num;<br>
+                &emsp;cout &lt;&lt; "Enter a number: ";<br>
+                &emsp;cin &gt;&gt; num;<br>
+                &emsp;cout &lt;&lt; "You entered: " &lt;&lt; num &lt;&lt; endl;<br>
+                &emsp;return 0;<br>
+                }
+            </code>
+            <p>This will prompt the user to enter a number and then display the entered number.</p>
+            
+            <hr>
+        </section>
+
+        <section id="conditional-statements">
+            <h2>Conditional Statements in C++</h2>
+            
+            <h3>1. IF-ELSE Statement</h3>
+            <p>The IF-ELSE statement is used to execute a block of code based on a condition:</p>
+            <code>
+                int num = 10;<br>
+                if (num &gt; 0) {<br>
+                &emsp;cout &lt;&lt; "Positive number";<br>
+                } else {<br>
+                &emsp;cout &lt;&lt; "Negative number or zero";<br>
+                }
+            </code>
+            <p>In this example, if the variable <code>num</code> is greater than 0, it prints "Positive number"; otherwise, it prints "Negative number or zero".</p>
+            
+            <h3>2. SWITCH-CASE Statement</h3>
+            <p>The SWITCH-CASE statement is used to select one of many blocks of code to be executed:</p>
+            <code>
+                char grade = 'B';<br>
+                switch (grade) {<br>
+                &emsp;case 'A':<br>
+                &emsp;&emsp;cout &lt;&lt; "Excellent";<br>
+                &emsp;&emsp;break;<br>
+                &emsp;case 'B':<br>
+                &emsp;&emsp;cout &lt;&lt; "Good";<br>
+                &emsp;&emsp;break;<br>
+                &emsp;case 'C':<br>
+                &emsp;&emsp;cout &lt;&lt; "Average";<br>
+                &emsp;&emsp;break;<br>
+                &emsp;default:<br>
+                &emsp;&emsp;cout &lt;&lt; "Fail";<br>
+                }
+            </code>
+            <p>In this example, based on the value of the variable <code>grade</code>, it prints the corresponding message (Excellent, Good, Average, or Fail).</p>
+            
+            <hr>
+        </section>
+
+        <section id="iteration-statements">
+            <h2>Iteration Statements in C++</h2>
+            
+            <h3>1. For Loop</h3>
+            <p>The for loop is used to execute a block of code repeatedly for a fixed number of times:</p>
+            <code>
+                for (int i = 0; i &lt; 5; i++) {<br>
+                &emsp;cout &lt;&lt; "Iteration " &lt;&lt; i + 1 &lt;&lt; endl;<br>
+                }
+            </code>
+            <p>This loop will iterate 5 times, printing "Iteration 1", "Iteration 2", ..., "Iteration 5".</p>
+            
+            <h3>2. While Loop</h3>
+            <p>The while loop is used to execute a block of code repeatedly as long as a condition is true:</p>
+            <code>
+                int i = 0;<br>
+                while (i &lt; 5) {<br>
+                &emsp;cout &lt;&lt; "Iteration " &lt;&lt; i + 1 &lt;&lt; endl;<br>
+                &emsp;i++;<br>
+                }
+            </code>
+            <p>This loop will iterate until the value of <code>i</code> is less than 5, printing "Iteration 1", "Iteration 2", ..., "Iteration 5".</p>
+            
+            <h3>3. Do-While Loop</h3>
+            <p>The do-while loop is used to execute a block of code repeatedly until a condition is false:</p>
+            <code>
+                int i = 0;<br>
+                do {<br>
+                &emsp;cout &lt;&lt; "Iteration " &lt;&lt; i + 1 &lt;&lt; endl;<br>
+                &emsp;i++;<br>
+                } while (i &lt; 5);
+            </code>
+            <p>This loop will execute the code block at least once and then continue to iterate until the value of <code>i</code> is less than 5, printing "Iteration 1", "Iteration 2", ..., "Iteration 5".</p>
+            
+            <h3>4. Break and Continue Statements</h3>
+            <p>The <code>break</code> statement is used to exit the loop prematurely, while the <code>continue</code> statement is used to skip the current iteration and continue with the next iteration:</p>
+            <code>
+                for (int i = 0; i &lt; 10; i++) {<br>
+                &emsp;if (i == 5) {<br>
+                &emsp;&emsp;break; // Exit the loop when i equals 5<br>
+                &emsp;}<br>
+                &emsp;if (i % 2 == 0) {<br>
+                &emsp;&emsp;continue; // Skip even numbers<br>
+                &emsp;}<br>
+                &emsp;cout &lt;&lt; i &lt;&lt; endl;<br>
+                }
+            </code>
+            <p>This loop will print odd numbers from 0 to 9 and exit when <code>i</code> equals 5.</p>
+            
+            <hr>
+        </section>
+
+        <section id="arrays">
+            <h2>Arrays in C++</h2>
+            
+            <h3>1. Basics of Arrays</h3>
+            <p>An array is a collection of elements of the same data type stored in contiguous memory locations. Each element in the array can be accessed by its index.</p>
+            <code>
+                int arr[5] = {1, 2, 3, 4, 5}; // Declaring and initializing an array<br>
+                cout &lt;&lt; "First element: " &lt;&lt; arr[0] &lt;&lt; endl; // Accessing the first element<br>
+                cout &lt;&lt; "Second element: " &lt;&lt; arr[1] &lt;&lt; endl; // Accessing the second element
+            </code>
+            <p>This code initializes an integer array <code>arr</code> with 5 elements and accesses the first and second elements using their indices.</p>
+            
+            <h3>2. Array Operations</h3>
+            <p>Common operations performed on arrays include accessing elements, modifying elements, and iterating through the array.</p>
+            <code>
+                int arr[5]; // Declaring an array<br>
+                // Initializing array elements<br>
+                for (int i = 0; i &lt; 5; i++) {<br>
+                &emsp;arr[i] = i + 1;<br>
+                }<br>
+                // Printing array elements<br>
+                cout &lt;&lt; "Array elements: " &lt;&lt; endl;<br>
+                for (int i = 0; i &lt; 5; i++) {<br>
+                &emsp;cout &lt;&lt; arr[i] &lt;&lt; " ";<br>
+                }
+            </code>
+            <p>This code initializes an integer array <code>arr</code> with values from 1 to 5 and then prints all the elements of the array.</p>
+            
+            <hr>
+        </section>
+
+        <section id="structures-unions-enums">
+            <h2>Structures, Unions, and Enums in C++</h2>
+            
+            <h3>1. Structures</h3>
+            <p>A structure is a user-defined data type that allows you to group related variables of different data types together:</p>
+            <code>
+                struct Point {<br>
+                &emsp;int x;<br>
+                &emsp;int y;<br>
+                };
+            </code>
+            <p>This defines a structure named <code>Point</code> with two members: <code>x</code> and <code>y</code>, both of type <code>int</code>.</p>
+            
+            <h3>2. Unions</h3>
+            <p>A union is a special data type that allows storing different data types in the same memory location. Only one member of the union can be accessed at a time:</p>
+            <code>
+                union Value {<br>
+                &emsp;int intValue;<br>
+                &emsp;float floatValue;<br>
+                &emsp;char charValue;<br>
+                };
+            </code>
+            <p>This defines a union named <code>Value</code> that can store an integer, a float, or a character value.</p>
+            
+            <h3>3. Enums</h3>
+            <p>An enumeration (enum) is a user-defined data type used to assign names to integral constants, making the code more readable and maintainable:</p>
+            <code>
+                enum Weekday {<br>
+                &emsp;Monday,<br>
+                &emsp;Tuesday,<br>
+                &emsp;Wednesday,<br>
+                &emsp;Thursday,<br>
+                &emsp;Friday,<br>
+                &emsp;Saturday,<br>
+                &emsp;Sunday<br>
+                };
+            </code>
+            <p>This defines an enum named <code>Weekday</code> with the names of the days of the week as its members.</p>
+            
+            <hr>
+        </section>
+
+        <section id="functions">
+            <h2>Functions in C++</h2>
+            
+            <h3>1. Parameters and Return Types</h3>
+            <p>A function in C++ can have parameters (inputs) and a return type (output):</p>
+            <code>
+                int add(int a, int b) {<br>
+                &emsp;return a + b;<br>
+                }
+            </code>
+            <p>This defines a function named <code>add</code> that takes two integer parameters <code>a</code> and <code>b</code> and returns their sum.</p>
+            
+            <h3>2. Recursion</h3>
+            <p>Recursion is a technique where a function calls itself to solve smaller instances of the same problem:</p>
+            <code>
+                int factorial(int n) {<br>
+                &emsp;if (n == 0) {<br>
+                &emsp;&emsp;return 1;<br>
+                &emsp;} else {<br>
+                &emsp;&emsp;return n * factorial(n - 1);<br>
+                &emsp;}<br>
+                }
+            </code>
+            <p>This defines a recursive function to calculate the factorial of a number <code>n</code>.</p>
+            
+            <h3>3. Function Overloading</h3>
+            <p>Function overloading allows multiple functions with the same name but different parameter lists:</p>
+            <code>
+                int max(int a, int b) {<br>
+                &emsp;return (a &gt; b) ? a : b;<br>
+                }<br><br>
+                
+                float max(float a, float b) {<br>
+                &emsp;return (a &gt; b) ? a : b;<br>
+                }
+            </code>
+            <p>This defines two overloaded functions named <code>max</code> to find the maximum of two integers and two floats, respectively.</p>
+            
+            <hr>
+        </section>
+
+        <section id="strings">
+            <h2>Strings in C++</h2>
+            
+            <h3>1. Basics of Strings</h3>
+            <p>In C++, a string is a sequence of characters stored in contiguous memory locations. You can use the <code>string</code> class from the standard library to work with strings:</p>
+            <code>
+                #include &lt;string&gt;<br>
+                using namespace std;<br><br>
+                
+                string str = "Hello, World!"; // Declaring and initializing a string<br>
+                cout &lt;&lt; "String length: " &lt;&lt; str.length() &lt;&lt; endl; // Getting the length of the string<br>
+                cout &lt;&lt; "First character: " &lt;&lt; str[0] &lt;&lt; endl; // Accessing the first character
+            </code>
+            <p>This code initializes a string <code>str</code> with the value "Hello, World!" and demonstrates accessing the length and first character of the string.</p>
+            
+            <h3>2. String Functions</h3>
+            <p>The <code>string</code> class provides various member functions to manipulate strings:</p>
+            <ul>
+                <li><code>append()</code>: Appends a string to the end of another string.</li>
+                <li><code>substr()</code>: Extracts a substring from a string.</li>
+                <li><code>find()</code>: Finds the first occurrence of a substring within a string.</li>
+                <li><code>replace()</code>: Replaces a portion of the string with another string.</li>
+                <li>And many more...</li>
+            </ul>
+            <code>
+                string str1 = "Hello";<br>
+                string str2 = "World";<br>
+                str1.append(", ").append(str2);<br>
+                cout &lt;&lt; "Appended string: " &lt;&lt; str1 &lt;&lt; endl;<br>
+                cout &lt;&lt; "Substring: " &lt;&lt; str1.substr(0, 5) &lt;&lt; endl;<br>
+                cout &lt;&lt; "Index of 'World': " &lt;&lt; str1.find("World") &lt;&lt; endl;<br>
+                str1.replace(6, 5, "Universe");<br>
+                cout &lt;&lt; "Replaced string: " &lt;&lt; str1 &lt;&lt; endl;
+            </code>
+            <p>This code demonstrates some of the common string functions provided by the <code>string</code> class.</p>
+            
+            <hr>
+        </section>
+
+        
+        
+
+
+
+
+
+        <section>
+            <h2 id="content-soon" style="color: rgb(209, 157, 78);">Thanks for staying! More content will be added
+                soon...
+            </h2>
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Krishna Anand</p>
+    </footer>
+</body>
+
+</html>
