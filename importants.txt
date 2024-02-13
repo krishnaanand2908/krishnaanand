@@ -1,0 +1,29 @@
+<header>
+        <div class="head">
+            <h1>Krishna Anand</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@pythonkrishna290" target="_blank">YouTube</a>
+                </li>
+                <li>
+                    <a href="https://github.com/krishnaanand2908" target="_blank">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:pythonkrishna290@gmail.com">Gmail</a>
+                </li>
+                <li>
+                    <a href="https://replit.com/@PythonKrishna29" target="_blank">Replit</a>
+                </li>
+            </ul>
+        </nav>
+</header>
+
+
+<footer>
+        <p>&copy; 2024 Krishna Anand</p>
+</footer>
